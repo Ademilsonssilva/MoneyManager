@@ -1,0 +1,1 @@
+<a href="{{$slot}}"><i class="fas fa-arrow-right" title="{{$titulo ?? 'Subcadastro'}}"></i></a>

@@ -1,0 +1,1 @@
+<a href="{{$slot}}" ><i class="fas fa-pen" title="Alterar"></i></a>
