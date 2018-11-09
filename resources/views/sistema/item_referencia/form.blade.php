@@ -14,7 +14,7 @@
 		'descricao' => 'Evento',
 		'nullable' => true,
 		'dados' => \App\Models\Evento::getTodosEventosArr(true),
-		'valor' => isset($referencia) ? $item_referencia->evento_id : null,
+		'valor' => isset($item_referencia) ? $item_referencia->evento_id : null,
 		'required' => 'required'
 	]) @endcomponent
 </div>
