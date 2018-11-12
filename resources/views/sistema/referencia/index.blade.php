@@ -33,7 +33,7 @@
 											@endcomponent
 											
 											@component('components.btn_excluir')
-												{{$referencia->id}}
+												{{route('sistema.referencia.excluir', $referencia->id)}}
 											@endcomponent
 
 											@component('components.btn_submenu', [

@@ -42,4 +42,9 @@ class ItemReferencia extends Model
         return $this->data->format('d');
     }
 
+    public function referencia()
+    {
+        return $this->belongsTo(Referencia::class);
+    }
+
 }

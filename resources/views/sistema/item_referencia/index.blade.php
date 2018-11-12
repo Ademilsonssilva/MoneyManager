@@ -29,7 +29,9 @@
 												{{route('sistema.item_referencia.alterar', [$referencia->id, $item->id])}}
                                             @endcomponent
 											
-											@component('components.btn_excluir', ['slot' => [$referencia->id, $item->id]])@endcomponent
+											@component('components.btn_excluir') 
+												{{route('sistema.item_referencia.excluir', [$referencia->id, $item->id])}}
+											@endcomponent
 
 										</td>
 									</tr>

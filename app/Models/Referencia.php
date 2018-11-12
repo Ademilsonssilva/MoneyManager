@@ -32,4 +32,25 @@ class Referencia extends Model
     {
         return $this->mes_ext . ' de ' . $this->ano;
     }
+
+    public function calculaValores()
+    {
+        $credito = $debito = $liquido = 0;
+        foreach(ItemReferencia::where('referencia_id', $this->id)->get() as $item) {
+            if($item->tipo_evento == 'credito') {
+                $credito += $item->valor;
+            }
+            else if($item->tipo_evento == 'debito') {
+                $debito += $item->valor;
+            }
+        }
+
+        $liquido = $credito - $debito;
+
+        $this->valor_credito = $credito;
+        $this->valor_debito = $debito;
+        $this->valor_liquido = $liquido;
+
+        $this->save();
+    }
 }
