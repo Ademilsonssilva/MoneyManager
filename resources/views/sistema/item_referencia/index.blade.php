@@ -10,6 +10,7 @@
 				<div>
 					<table class="table table-striped table-hover">
 						<thead>
+							<th>Evento</th>
 							<th>Data</th>
 							<th>Valor</th>
 							<th>Tipo</th>
@@ -20,6 +21,7 @@
                             @if(sizeof($itens_referencia) > 0)
     							@foreach($itens_referencia as $item)
     								<tr>
+										<td>{{$item->descricao}}</td>
 										<td>{{$item->data->format('d/m/Y')}}</td>
 										<td class="valor_formatado">{{$item->valor}}</td>
                                         <td>{{$item->tipo_evento_text}}</td>
